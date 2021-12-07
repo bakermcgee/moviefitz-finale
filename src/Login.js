@@ -3,14 +3,18 @@ import "./Login.css"
 import { auth } from './Firebase';
 import { signInWithPopup, GoogleAuthProvider } from 'firebase/auth';
 import NavbarLogin from "./NavbarLogin";
+import { useNavigate } from 'react-router-dom';
 
 export default function Login() {
+
+    const nav = useNavigate();
 
     const signInWithGoogle = () =>{
         const provider = new GoogleAuthProvider();
         signInWithPopup(auth, provider)
             .then((re) => {
                 console.log(re);
+                nav('/profile');
             })
             .catch((err) => {
                 console.log(err);
