@@ -1,14 +1,17 @@
 import React from "react";
 import './Landing.css';
+import NavbarLanding from "./NavbarLanding";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCalendarAlt } from "@fortawesome/free-solid-svg-icons";
 import { faThumbsUp } from "@fortawesome/free-solid-svg-icons";
 import { faSlidersH } from "@fortawesome/free-solid-svg-icons";
 
+
 export default function Landing(){
 
     return(
-
+        <div>
+        <NavbarLanding />
         <div className="center-txt">
             <header className='bigger-txt'>
                 MovieFitz
@@ -39,7 +42,7 @@ export default function Landing(){
             </div>
 
         </div>
-
+        </div>
     );
 
 }

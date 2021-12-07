@@ -4,14 +4,14 @@ import { getAuth } from "firebase/auth";
 
 const fbConfig = {
 
-        apiKey: "AIzaSyCQdDHNAI71ITTRUVc0s-3fpbcTKdvPPdY",
-        authDomain: "moviefitz-14228.firebaseapp.com",
-        databaseURL: "https://moviefitz-14228-default-rtdb.firebaseio.com",
-        projectId: "moviefitz-14228",
-        storageBucket: "moviefitz-14228.appspot.com",
-        messagingSenderId: "387011886207",
-        appId: "1:387011886207:web:5ea7780c00a44a2ece134a",
-        measurementId: "G-763M06W6B9"
+        apiKey: "AIzaSyAcHNY4jTrmNOB8IZEuN7N6Opk1LqE2SWs",
+        authDomain: "movierecommend-aa0cd.firebaseapp.com",
+        databaseURL: "https://movierecommend-aa0cd-default-rtdb.firebaseio.com",
+        projectId: "movierecommend-aa0cd",
+        storageBucket: "movierecommend-aa0cd.appspot.com",
+        messagingSenderId: "1071634799655",
+        appId: "1:1071634799655:web:3b7914471f57fc74e18202",
+        measurementId: "G-D5YJFELNFK"
 
 }
 

@@ -1,9 +1,8 @@
 import React from "react";
 //import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
-//import Login from "./Login";
-import Landing from "./Landing";
-import Navbar from "./Navbar";
+import Login from "./Login";
+//import Landing from "./Landing";
 //import Dashboard from "./Dashboard";
 
 
@@ -21,8 +20,7 @@ function App() {
 
        */
       <body>
-        <Navbar />
-        <Landing />
+        <Login />
       </body>
 
   );

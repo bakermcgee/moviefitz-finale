@@ -2,7 +2,7 @@
 import "./Login.css"
 import { auth } from './Firebase';
 import { signInWithPopup, GoogleAuthProvider } from 'firebase/auth';
-
+import NavbarLogin from "./NavbarLogin";
 
 export default function Login() {
 
@@ -18,11 +18,24 @@ export default function Login() {
     }
 
     return (
-        <div className="login-buttons">
-            <button className="login-provider-button" onClick={signInWithGoogle}>
-                <img src="https://img.icons8.com/ios-filled/50/000000/google-logo.png" alt="google icon"/>
-                <span> Continue with Google</span>
-            </button>
+        <div>
+            <NavbarLogin />
+            <div className="container login-container">
+                <div className="card">
+                    <div className="card-content">
+                        <header className='login-txt'>
+                            Login
+                        </header>
+                        <br></br><br></br>
+                        <div className="login-buttons">
+                            <button className="login-provider-button" style={{position: "relative", left: "65px"}} onClick={signInWithGoogle}>
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/IOS_Google_icon.png" alt="google icon" width='60' height='60'/>
+                                <span> Continue with Google</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     );
 }
