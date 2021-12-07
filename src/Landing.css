@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css?family=Bebas+Neue');
+.center-txt{
+
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+
+    color: #f2f2f2;
+    text-align: center;
+    padding: 100px 20px;
+    font-size: 16px;
+
+}
+
+.txt-box{
+
+    padding: 10px 0;
+    background-color: rgba(101, 98, 98, 0.91);
+
+}
+
+.big-txt{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    text-align: center;
+    font-size: 28px;
+}
+
+.bigger-txt{
+
+    font-family: 'Bebas Neue', cursive;
+    font-size: 64px;
+
+}

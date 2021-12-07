@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css?family=Bebas+Neue');
+
+.navbar{
+
+    list-style-type: none;
+    background-color: rgba(47, 47, 47, 0.91);
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+
+}
+
+.navbar-sn{
+
+    font-family: 'Bebas Neue', cursive;
+    float: left;
+    background-color: #000000;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: 24px;
+
+}
+
+.navbar-op{
+
+    font-family: 'Bebas Neue', cursive;
+    float: left;
+    background-color: rgba(47, 47, 47, 0.91);
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: 24px;
+
+}
+
+.navbar-op-s{
+
+    background-color: rgba(23, 23, 23, 0.91);
+
+}
+
+.navbar-op-h:hover{
+
+    background-color: rgba(77, 77, 77, 0.91);
+
+}
