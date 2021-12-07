@@ -1,13 +1,15 @@
 import React from "react";
 import './Navbar.css';
+import {useNavigate} from "react-router-dom";
 
 export default function NavbarLogin(){
+
+    const nav = useNavigate();
 
     return (
 
         <div className="navbar">
-            <button className="navbar-sn">MovieFitz</button>
-            <button className="navbar-op navbar-op-h" style={{position: "absolute", right: "0"}}>Sign Up</button>
+            <button className="navbar-sn" onClick={() => nav('/')}>MovieFitz</button>
         </div>
 
     );
