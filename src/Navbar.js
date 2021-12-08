@@ -11,7 +11,7 @@ export default function Navbar(){
         <div className="navbar">
             <button className="navbar-sn" onClick={() => nav('/profile')}>MovieFitz</button>
             <button className="navbar-op navbar-op-h" style={{position: "absolute", left: "118px"}} onClick={() => nav('/Recommended')}>Recommended</button>
-            <button className="navbar-op navbar-op-h" style={{position: "absolute", left: "272px"}} onClick={() => nav('/Recommended')}>Now Playing</button>
+
             <button className="navbar-op navbar-op-h" style={{position: "absolute", right: "99px"}} onClick={() => nav('/Profile')}>Profile</button>
             <button className="navbar-op navbar-op-h" style={{position: "absolute", right: "0"}} onClick={() => nav('/')}>Logout</button>
 

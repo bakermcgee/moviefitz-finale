@@ -1,8 +1,17 @@
 import React from "react";
 import './Recommended.css';
 import Navbar from "./Navbar";
+//import firebase from "firebase/compat";
 
-const movies = ["Iron Man","Star Wars", "Legend of Hei", "Dragon Ball Super: Superhero", "Ghostbusters Afterlife", "House of Gucci", "The Incredibles", "Logan","Sonic The Hedgehog", "2012"];
+const movies = ["No Time To Die","Venom: Let There Be Carnage", "The Green Knight", "Clifford The Big Red Dog", "Ghostbusters: Afterlife", "House of Gucci", "Free Guy", "Nobody","The Power of the Dog", "Eternals"];
+
+/*function FetchMovies(){
+
+    firebase.database().ref('').once('value', function (snapshot){
+
+    });
+
+}*/
 
 export default function Recommended(){
 
@@ -14,7 +23,7 @@ export default function Recommended(){
             <Navbar />
             <br></br><br></br>
             <div >
-                <header className='h-txt'>10 Movies Chosen For You</header>
+                <header className='h-txt'>Movies Chosen For You</header>
                 <br></br>
                 <div className='movie-lane'>
                     {moveList}
