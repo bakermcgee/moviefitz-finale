@@ -1,12 +1,23 @@
 import React, { useState } from "react";
 import './Profile.css';
 import Navbar from "./Navbar";
+import {credentials} from "./Login";
 import { faFilm } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { getDatabase, ref, set } from "firebase/database";
 
 export default function Profile(){
 
-    const [genres, setGenres] = useState(Array(6).fill(false));
+    function writeGenreData(genre){
+        const db = getDatabase();
+        const userId = credentials.user.uid;
+        set(ref(db, 'users/' + userId + '/genre'), {
+            preferred_genre : genre
+        });
+    }
+
+
+    //const [genres, setGenres] = useState(Array(6).fill(false));
     const [max, setMax] = useState(false);
     const [action, setAction] = useState(false);
     const [comedy, setComedy] = useState(false);
@@ -15,17 +26,20 @@ export default function Profile(){
     const [mystery, setMystery] = useState(false);
     const [romance, setRomance] = useState(false);
 
+    /* needed for updating later to add multiple genres
     const addGenre = (i) => {
         const tempGenres = genres.slice();
         tempGenres[i] = !tempGenres[i];
         setGenres(tempGenres);
     }
+     */
 
     const changeAction = () => {
         if(!max || (max && action)) {
             setAction(!action);
             setMax(!max);
-            addGenre(0);
+            writeGenreData('Action');
+            //addGenre(0);
         }
     }
 
@@ -33,7 +47,8 @@ export default function Profile(){
         if(!max || (max && comedy)) {
             setComedy(!comedy);
             setMax(!max);
-            addGenre(1);
+            writeGenreData('Comedy');
+            //addGenre(1);
         }
     }
 
@@ -41,7 +56,8 @@ export default function Profile(){
         if(!max || (max && horror)) {
             setHorror(!horror);
             setMax(!max);
-            addGenre(2);
+            writeGenreData('Horror');
+            //addGenre(2);
         }
     }
 
@@ -49,7 +65,8 @@ export default function Profile(){
         if(!max || (max && indie)) {
             setIndie(!indie);
             setMax(!max);
-            addGenre(3);
+            writeGenreData('Indie');
+            //addGenre(3);
         }
     }
 
@@ -57,7 +74,8 @@ export default function Profile(){
         if(!max || (max && mystery)) {
             setMystery(!mystery);
             setMax(!max);
-            addGenre(4);
+            writeGenreData('Mystery');
+            //addGenre(4);
         }
     }
 
@@ -65,9 +83,11 @@ export default function Profile(){
         if(!max || (max && romance)) {
             setRomance(!romance);
             setMax(!max);
-            addGenre(5);
+            writeGenreData('Romance');
+            //addGenre(5);
         }
     }
+
 
     const Checkbox = ({ label, value, onChange }) => {
         return (

@@ -4,6 +4,7 @@ import "./App.css";
 import Landing from "./Landing";
 import Login from "./Login";
 import Profile from "./Profile";
+import Recommended from "./Recommended";
 //import Dashboard from "./Dashboard";
 
 
@@ -26,6 +27,7 @@ function App() {
                 <Route path='/' element ={<Landing />} />
                 <Route path='/login' element ={<Login />} />
                 <Route path='/profile' element ={<Profile />} />
+                <Route path='/recommended' element ={<Recommended />} />
             </Routes>
         </BrowserRouter>
       </body>
