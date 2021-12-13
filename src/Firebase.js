@@ -4,14 +4,14 @@ import { getAuth } from "firebase/auth";
 
 const fbConfig = {
 
-        apiKey: "AIzaSyAcHNY4jTrmNOB8IZEuN7N6Opk1LqE2SWs",
-        authDomain: "movierecommend-aa0cd.firebaseapp.com",
-        databaseURL: "https://movierecommend-aa0cd-default-rtdb.firebaseio.com",
-        projectId: "movierecommend-aa0cd",
-        storageBucket: "movierecommend-aa0cd.appspot.com",
-        messagingSenderId: "1071634799655",
-        appId: "1:1071634799655:web:3b7914471f57fc74e18202",
-        measurementId: "G-D5YJFELNFK"
+        apiKey: process.env.REACT_APP_API_KEY,
+        authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+        databaseURL: process.env.REACT_APP_DATABASE_URL,
+        projectId: process.env.REACT_APP_PROJECT_ID,
+        storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+        messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
+        appId: process.env.REACT_APP_APP_ID,
+        measurementId: process.env.REACT_APP_MEASUREMENT_ID
 
 }
 

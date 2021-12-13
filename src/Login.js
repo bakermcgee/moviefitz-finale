@@ -1,7 +1,6 @@
-//import React, { useState } from 'react';
 import "./Login.css"
 import { auth } from './Firebase';
-import { signInWithPopup, GoogleAuthProvider } from 'firebase/auth';
+import { signInWithPopup, GoogleAuthProvider, setPersistence, browserSessionPersistence } from 'firebase/auth';
 import NavbarLogin from "./NavbarLogin";
 import { useNavigate } from 'react-router-dom';
 import {useCallback} from "react";
@@ -11,20 +10,21 @@ const useLogin = () =>{
     const nav = useNavigate();
     return useCallback(() =>{
         const provider = new GoogleAuthProvider();
-        signInWithPopup(auth, provider)
-            .then((re) => {
-                console.log(re);
-                credentials = re;
-                nav('/profile');
+        setPersistence(auth, browserSessionPersistence) //keeps login persistent to avoid crashes on refresh
+            .then(() => {
+                signInWithPopup(auth, provider) //signs into google via popup
+                    .then((re) => {
+                        const credentials = re;
+                        nav('/profile');
+                    })
+                    .catch((err) => {
+                        console.log(err);
+                    })
             })
-            .catch((err) => {
-                console.log(err);
-            })
+
     }, [nav]);
 
 }
-
-export let credentials;
 
 export default function Login() {
     const signInWithGoogle = useLogin();

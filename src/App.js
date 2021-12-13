@@ -5,32 +5,24 @@ import Landing from "./Landing";
 import Login from "./Login";
 import Profile from "./Profile";
 import Recommended from "./Recommended";
-//import Dashboard from "./Dashboard";
+import AdminUpdate from "./AdminUpdate";
+import NowPlaying from "./NowPlaying";
 
 
 function App() {
   return (
-      /*
-      <div className="App">
-        <BrowserRouter>
-            <Routes>
-              <Route path="/login" index element ={<Login />} />
-              <Route path="/dashboard" element ={<Dashboard />} />
-            </Routes>
-        </BrowserRouter>
-      </div>
-
-       */
-      <body>
+      <div>
         <BrowserRouter>
             <Routes>
                 <Route path='/' element ={<Landing />} />
                 <Route path='/login' element ={<Login />} />
+                <Route path='/admin' element ={<AdminUpdate />} />
                 <Route path='/profile' element ={<Profile />} />
+                <Route path='/now-playing' element ={<NowPlaying />} />
                 <Route path='/recommended' element ={<Recommended />} />
             </Routes>
         </BrowserRouter>
-      </body>
+      </div>
 
   );
 }
