@@ -69,11 +69,13 @@ export default function Recommended(){
 
         userGenres.forEach((genre) => { //for each user genre
             ge.forEach((genr) => { //for each movies' genres
-                genr.forEach((gen) => { //for each movie's genres
-                    if (gen === genre) { //if the movie's genre matches the user genre, it's added to the list
-                        tmp.push(t[ge.indexOf(genr)]);
-                    }
-                })
+                if(genr != null){
+                    genr.forEach((gen) => { //for each movie's genres
+                        if (gen === genre) { //if the movie's genre matches the user genre, it's added to the list
+                            tmp.push(t[ge.indexOf(genr)]);
+                        }
+                    })
+                }
             })
         })
 
